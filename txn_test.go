@@ -26,8 +26,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/dgraph-io/badger/v2/options"
-	"github.com/dgraph-io/badger/v2/y"
+	"github.com/sekulicd/badger/v2/options"
+	"github.com/sekulicd/badger/v2/y"
 
 	"github.com/stretchr/testify/require"
 )
@@ -869,7 +869,7 @@ func TestArmV7Issue311Fix(t *testing.T) {
 
 // This test tries to perform a GetAndSet operation using multiple concurrent
 // transaction and only one of the transactions should be successful.
-// Regression test for https://github.com/dgraph-io/badger/issues/1289
+// Regression test for https://github.com/sekulicd/badger/issues/1289
 func TestConflict(t *testing.T) {
 	key := []byte("foo")
 	setCount := uint32(0)

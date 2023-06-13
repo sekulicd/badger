@@ -33,10 +33,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/dgraph-io/badger/v2/options"
-	"github.com/dgraph-io/badger/v2/pb"
-	"github.com/dgraph-io/badger/v2/table"
-	"github.com/dgraph-io/badger/v2/y"
+	"github.com/sekulicd/badger/v2/options"
+	"github.com/sekulicd/badger/v2/pb"
+	"github.com/sekulicd/badger/v2/table"
+	"github.com/sekulicd/badger/v2/y"
 	"github.com/stretchr/testify/require"
 )
 
@@ -358,7 +358,7 @@ func BenchmarkDBOpen(b *testing.B) {
 	}
 }
 
-// Regression test for https://github.com/dgraph-io/badger/issues/830
+// Regression test for https://github.com/sekulicd/badger/issues/830
 func TestDiscardMapTooBig(t *testing.T) {
 	createDiscardStats := func() map[uint32]int64 {
 		stat := map[uint32]int64{}
@@ -689,16 +689,21 @@ func TestL0GCBug(t *testing.T) {
 	require.NoError(t, db2.Close())
 }
 
-// Regression test for https://github.com/dgraph-io/badger/issues/1126
+// Regression test for https://github.com/sekulicd/badger/issues/1126
 //
 // The test has 3 steps
 // Step 1 - Create badger data. It is necessary that the value size is
-//          greater than valuethreshold. The value log file size after
-//          this step is around 170 bytes.
+//
+//	greater than valuethreshold. The value log file size after
+//	this step is around 170 bytes.
+//
 // Step 2 - Re-open the same badger and simulate a crash. The value log file
-//          size after this crash is around 2 GB (we increase the file size to mmap it).
+//
+//	size after this crash is around 2 GB (we increase the file size to mmap it).
+//
 // Step 3 - Re-open the same badger. We should be able to read all the data
-//          inserted in the first step.
+//
+//	inserted in the first step.
 func TestWindowsDataLoss(t *testing.T) {
 	if runtime.GOOS != "windows" {
 		t.Skip("The test is only for Windows.")

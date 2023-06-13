@@ -19,9 +19,9 @@ package badger
 import (
 	"sync"
 
-	"github.com/dgraph-io/badger/v2/pb"
-	"github.com/dgraph-io/badger/v2/y"
 	"github.com/pkg/errors"
+	"github.com/sekulicd/badger/v2/pb"
+	"github.com/sekulicd/badger/v2/y"
 )
 
 // WriteBatch holds the necessary info to perform batched writes.

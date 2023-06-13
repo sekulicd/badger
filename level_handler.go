@@ -23,9 +23,9 @@ import (
 
 	"github.com/dgryski/go-farm"
 
-	"github.com/dgraph-io/badger/v2/table"
-	"github.com/dgraph-io/badger/v2/y"
 	"github.com/pkg/errors"
+	"github.com/sekulicd/badger/v2/table"
+	"github.com/sekulicd/badger/v2/y"
 )
 
 type levelHandler struct {

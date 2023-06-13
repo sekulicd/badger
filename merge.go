@@ -20,8 +20,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/dgraph-io/badger/v2/y"
 	"github.com/pkg/errors"
+	"github.com/sekulicd/badger/v2/y"
 )
 
 // MergeOperator represents a Badger merge operator.

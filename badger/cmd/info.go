@@ -29,11 +29,11 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/dgraph-io/badger/v2"
-	"github.com/dgraph-io/badger/v2/options"
-	"github.com/dgraph-io/badger/v2/table"
-	"github.com/dgraph-io/badger/v2/y"
 	humanize "github.com/dustin/go-humanize"
+	"github.com/sekulicd/badger/v2"
+	"github.com/sekulicd/badger/v2/options"
+	"github.com/sekulicd/badger/v2/table"
+	"github.com/sekulicd/badger/v2/y"
 	"github.com/spf13/cobra"
 )
 

@@ -23,9 +23,9 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/dgraph-io/badger/v2/table"
-	"github.com/dgraph-io/badger/v2/y"
 	"github.com/pkg/errors"
+	"github.com/sekulicd/badger/v2/table"
+	"github.com/sekulicd/badger/v2/y"
 )
 
 func (s *levelsController) validate() error {

@@ -26,9 +26,9 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/dgraph-io/badger/v2/y"
 	"github.com/dgraph-io/ristretto/z"
 	"github.com/pkg/errors"
+	"github.com/sekulicd/badger/v2/y"
 )
 
 type oracle struct {
@@ -753,9 +753,9 @@ func (txn *Txn) ReadTs() uint64 {
 // to. Commit API internally runs Discard, but running it twice wouldn't cause
 // any issues.
 //
-//  txn := db.NewTransaction(false)
-//  defer txn.Discard()
-//  // Call various APIs.
+//	txn := db.NewTransaction(false)
+//	defer txn.Discard()
+//	// Call various APIs.
 func (db *DB) NewTransaction(update bool) *Txn {
 	return db.newTransaction(update, false)
 }

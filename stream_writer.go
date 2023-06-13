@@ -22,11 +22,11 @@ import (
 	"math"
 	"sync"
 
-	"github.com/dgraph-io/badger/v2/pb"
-	"github.com/dgraph-io/badger/v2/table"
-	"github.com/dgraph-io/badger/v2/y"
 	humanize "github.com/dustin/go-humanize"
 	"github.com/pkg/errors"
+	"github.com/sekulicd/badger/v2/pb"
+	"github.com/sekulicd/badger/v2/table"
+	"github.com/sekulicd/badger/v2/y"
 )
 
 const headStreamId uint32 = math.MaxUint32

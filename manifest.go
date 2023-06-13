@@ -27,11 +27,11 @@ import (
 	"path/filepath"
 	"sync"
 
-	"github.com/dgraph-io/badger/v2/options"
-	"github.com/dgraph-io/badger/v2/pb"
-	"github.com/dgraph-io/badger/v2/y"
 	"github.com/golang/protobuf/proto"
 	"github.com/pkg/errors"
+	"github.com/sekulicd/badger/v2/options"
+	"github.com/sekulicd/badger/v2/pb"
+	"github.com/sekulicd/badger/v2/y"
 )
 
 // Manifest represents the contents of the MANIFEST file in a Badger store.
@@ -360,7 +360,7 @@ func ReplayManifestFile(fp *os.File) (Manifest, int64, error) {
 		return Manifest{}, 0,
 			//nolint:lll
 			fmt.Errorf("manifest has unsupported version: %d (we support %d).\n"+
-				"Please see https://github.com/dgraph-io/badger/blob/master/README.md#i-see-manifest-has-unsupported-version-x-we-support-y-error"+
+				"Please see https://github.com/sekulicd/badger/blob/master/README.md#i-see-manifest-has-unsupported-version-x-we-support-y-error"+
 				" on how to fix this.",
 				version, magicVersion)
 	}

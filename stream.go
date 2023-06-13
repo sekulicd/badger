@@ -24,10 +24,10 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/dgraph-io/badger/v2/pb"
-	"github.com/dgraph-io/badger/v2/y"
 	humanize "github.com/dustin/go-humanize"
 	"github.com/golang/protobuf/proto"
+	"github.com/sekulicd/badger/v2/pb"
+	"github.com/sekulicd/badger/v2/y"
 )
 
 const pageSize = 4 << 20 // 4MB

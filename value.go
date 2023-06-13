@@ -38,10 +38,10 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/dgraph-io/badger/v2/options"
-	"github.com/dgraph-io/badger/v2/pb"
-	"github.com/dgraph-io/badger/v2/y"
 	"github.com/pkg/errors"
+	"github.com/sekulicd/badger/v2/options"
+	"github.com/sekulicd/badger/v2/pb"
+	"github.com/sekulicd/badger/v2/y"
 	"golang.org/x/net/trace"
 )
 
